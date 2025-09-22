@@ -18,13 +18,14 @@ public class UsingJOptionPaneDialogs {
             int confirm = JOptionPane.showConfirmDialog(null, "Do you want to display your name?", "Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
 
             if (confirm == JOptionPane.YES_OPTION) {
-              
-                JOptionPane.showMessageDialog(null, "Hello, " + name, "Name Display", JOptionPane.INFORMATION_MESSAGE);
-                break; 
+                JOptionPane.showMessageDialog(null, "Hello, " + name, "Name Display", JOptionPane.INFORMATION_MESSAGE);      
+                int proceed = JOptionPane.showConfirmDialog(null,"Do you want to proceed?","Confirmation",JOptionPane.YES_NO_CANCEL_OPTION);
+                    
             } else if (confirm == JOptionPane.NO_OPTION || confirm == JOptionPane.CANCEL_OPTION || confirm == JOptionPane.CLOSED_OPTION) {
-               
+            
                 continue;
             }
         }
     }
 }
+
