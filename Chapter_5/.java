@@ -157,10 +157,10 @@ public class StudentRecordManager {
                 if (yearLevel <= 0) System.out.println("Year Level must be a positive number.");
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input for Year Level. Please enter a number.");
-                scanner.nextLine(); // consume invalid input
+                scanner.nextLine();
             }
         }
-        scanner.nextLine(); // consume the rest of the line
+        scanner.nextLine();
 
         System.out.print("Enter Phone Number: ");
         String phoneNumber = scanner.nextLine();
@@ -357,11 +357,9 @@ public class StudentRecordManager {
         }
 
         if (validSelection) {
-            if (courseRecord == null) {
-                // Initialize the course record if it's the first time
+            if (courseRecord == null) {          
                 courseRecord = new CourseDetails(name, code, department);
             } else {
-                // Update the existing course record
                 courseRecord.setCourse(name, code, department);
             }
             System.out.println("\nCourse details successfully set/updated to: " + name + " (" + code + ")");
